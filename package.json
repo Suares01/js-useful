@@ -4,13 +4,15 @@
   "description": "A set of useful functions, algorithms and data structures for your project.",
   "private": true,
   "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "scripts": {
     "build": "tsc",
     "test": "jest --projects . --findRelatedTests src/**/__tests__/*",
     "prepare": "husky install",
     "lint": "eslint --ext .ts --fix",
     "style": "prettier --write *.ts",
-    "commit": "git-cz"
+    "commit": "git-cz",
+    "prepublish": "yarn test && yarn build"
   },
   "repository": {
     "type": "git",
@@ -54,6 +56,9 @@
     "ts-node": "^10.7.0",
     "typescript": "^4.6.4"
   },
+  "files": [
+    "lib/**/*"
+  ],
   "lint-staged": {
     "*.ts": [
       "yarn lint",
