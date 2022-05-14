@@ -1,6 +1,6 @@
 {
   "name": "js-useful",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "A set of useful functions, algorithms and data structures for your project.",
   "private": true,
   "main": "lib/index.js",
