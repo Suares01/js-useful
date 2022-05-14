@@ -1,0 +1,68 @@
+{
+  "name": "js-useful",
+  "version": "1.0.0",
+  "description": "A set of useful functions, algorithms and data structures for your project.",
+  "private": true,
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "tsc",
+    "test": "jest --projects . --findRelatedTests src/**/__tests__/*",
+    "prepare": "husky install",
+    "lint": "eslint --ext .ts --fix",
+    "style": "prettier --write *.ts",
+    "commit": "git-cz"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Suares01/js-useful"
+  },
+  "bugs": {
+    "url": "https://github.com/Suares01/js-useful/issues"
+  },
+  "homepage": "https://github.com/Suares01/js-useful#readme",
+  "keywords": [
+    "util",
+    "functions",
+    "algorithms",
+    "typescript",
+    "javascript"
+  ],
+  "author": "Lucas Suares",
+  "license": "MIT",
+  "devDependencies": {
+    "@commitlint/cli": "^16.3.0",
+    "@commitlint/config-conventional": "^16.2.4",
+    "@eslint/create-config": "^0.1.2",
+    "@swc/core": "^1.2.183",
+    "@swc/jest": "^0.2.21",
+    "@types/jest": "^27.5.1",
+    "@types/node": "^17.0.31",
+    "@typescript-eslint/eslint-plugin": "^5.22.0",
+    "@typescript-eslint/parser": "^5.22.0",
+    "commitizen": "^4.2.4",
+    "cz-conventional-changelog": "3.3.0",
+    "eslint": "^8.14.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-import-resolver-typescript": "^2.7.1",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-import-helpers": "^1.2.1",
+    "eslint-plugin-prettier": "^4.0.0",
+    "husky": "^8.0.1",
+    "jest": "^28.1.0",
+    "lint-staged": "^12.4.1",
+    "prettier": "^2.6.2",
+    "ts-node": "^10.7.0",
+    "typescript": "^4.6.4"
+  },
+  "lint-staged": {
+    "*.ts": [
+      "yarn lint",
+      "yarn style"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
